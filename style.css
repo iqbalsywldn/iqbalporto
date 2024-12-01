@@ -1,0 +1,308 @@
+/* Base styling */
+html {
+  font-size: 62.5%;
+}
+/* Base styling */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #000000, #0D1B2A, #1B2631, #3F4B5B); /* Gradasi dari hitam ke biru tua */
+    background-size: 200% 200%; /* Mengatur ukuran background */
+    animation: gradientAnimation 15s ease infinite; /* Animasi gradasi */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animasi untuk background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Posisi awal */
+    }
+    50% {
+        background-position: 100% 50%; /* Posisi tengah */
+    }
+    100% {
+        background-position: 0% 50%; /* Kembali ke posisi awal */
+    }
+}
+
+/* Kode CSS lainnya... */
+
+
+/* Header styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  display: flex;
+  flex-direction:column ;
+  justify-content: space-between;
+  
+  
+  z-index: 80;
+  background: transparent;
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Menyusun gambar dan logo secara vertikal di tengah */
+}
+
+.logo {
+  font-size: 3rem;
+  color: #ff9800;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.5s ease;
+  margin-left: 1rem; /* Jarak antara gambar dan logo */
+
+}
+
+.logo span {
+  color: white;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav {
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  margin-right: 15rem;
+}
+
+nav a {
+  font-size: 3.5rem;
+  color: white;
+  margin-left: 1rem;
+  font-weight: 300;
+  transition: 0.3s ease;
+  border-bottom: 15px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 0px solid #b74b4b;
+}
+
+/* Home section */
+section {
+  min-height: 10vh;
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.home {
+  margin: 0rem;
+  margin-top: 0rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  
+}
+
+.home-content h3 {
+  font-size: 2.4rem;
+  margin-bottom: 0rem;
+  font-weight: 600;
+}
+
+.home-img img {
+  width: 60px; /* Ukuran kecil untuk gambar */
+  height: 60px; /* Mengatur tinggi gambar */
+  border-radius: 50%;
+  box-shadow: 0 0 25px #ff9800;
+  border: 1px solid #ff9800;
+  cursor: pointer;
+  transition: 0.2s linear;
+
+}
+.middle-image {
+    text-align: center; /* Menempatkan gambar di tengah */
+    margin: 20rem 0; /* Jarak antara navbar dan gambar */
+    margin-bottom: 0rem;
+}
+
+.middle-image img {
+    width: 80%; /* Ukuran gambar */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 10px; /* Mengatur sudut jika diinginkan */
+    
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 2rem;
+  
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 1rem;
+  margin-bottom: 0rem;
+  font-size: 2.5rem;
+  color: #b74b4b;
+  transition: 0.3s ease;
+  border: 1px solid #ff9800;
+  border-radius: 50%;
+  padding: 0.3rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  line-height: 3.5rem;
+  
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: white;
+}
+.nama span {
+  color: red;
+}
+
+
+.typing-text {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.typing-text span {
+  position: relative;
+  display: inline-block; /* Menambahkan display inline-block */
+  
+}
+
+.typing-text span:before {
+  content: 'I am a '; /* Menetapkan "I am" tetap */
+  display: inline; /* Memastikan "I am" tetap di baris yang sama */
+}
+
+.typing-text span:after {
+  color: #ff9800;
+  content: 'software developer'; /* Menetapkan teks awal */
+  animation: typing 10s steps(5, end) infinite; /* Animasi mengetik */
+  display: inline; /* Menampilkan dalam satu baris */
+}
+
+@keyframes typing {
+  0% {
+    content: 'automotive mechanic'; /* Menetapkan kata pertama */
+  }
+  20% {
+    content: 'service technician'; /* Mengganti ke kata kedua */
+  }
+  40% {
+    content: 'automotive specialist'; /* Mengganti ke kata ketiga */
+  }
+  60% {
+    content: 'scheduled maintenance'; /* Mengganti ke kata keempat */
+  }
+  80% {
+    content: 'web developer'; /* Mengganti ke kata kelima */
+  }
+  100% {
+    content: 'gamers'; /* Kembali ke kata pertama */
+  }
+}
+
+@keyframes cursor {
+  0%, 100% {
+    border-left: 3px solid black;
+  }
+  50% {
+    border-left: 3px solid transparent;
+  }
+}.description {
+  font-size: 150%; /* Ukuran teks deskripsi */
+  line-height: 1.5; /* Jarak antar baris */
+  margin: 2rem 0; /* Margin atas dan bawah */
+  text-align: center; /* Rata tengah teks */
+  color: #ffffff; /* Warna teks */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2.4rem;
+    
+  }
+
+  .home-img img {
+    width: 40px; /* Ukuran lebih kecil untuk mobile */
+    height: 40px; /* Mengatur tinggi untuk mobile */
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Mengurangi padding untuk layar kecil */
+    gap: 3.5rem;
+    height: 50px; /* Tinggi navbar di layar kecil */
+    margin-left: 7.5rem;
+  }
+
+  nav a {
+    font-size: 1.2rem; /* Mengecilkan ukuran font pada layar kecil */
+    margin: 0 0.5rem;  /* Kurangi jarak antar link */
+  }
+}
+
+  nav.active {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    background-color: black;
+    padding: 1rem;
+    z-index: 99;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .typing-text {
+    font-size: 1.8rem;
+  }
+
+  .social-icons a {
+    font-size: 1.6rem;
+  }
+  .middle-image {
+    width: 80%;
+    margin: auto;
+    margin-top: 15rem;
+  }

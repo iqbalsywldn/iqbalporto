@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Menggunakan font yang sama di seluruh halaman */
+  background-color: black; /* Atur latar belakang hitam untuk body */
+  height: 100vh; /* Pastikan body menutupi seluruh tinggi viewport */
+  color: white; /* Warna teks default menjadi putih untuk kontras */
+}
+
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #000000, #0D1B2A, #1B2631, #3F4B5B); /* Gradasi dari hitam ke biru tua */
+  color: white;
+  min-height: 100vh; /* Memastikan elemen mengisi tinggi layar */
+  box-sizing: border-box; /* Hitung padding dalam ukuran elemen */
+}
+
+.education-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparan untuk memberikan efek gelap */
+  padding: 0.5rem 1rem; /* Padding yang lebih kecil untuk membuat kartu lebih kompak */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Lebih dalam untuk efek bayangan */
+  width: 300px; /* Mengatur lebar yang sama untuk semua kartu */
+  height: 300px; /* Mengatur tinggi yang sama untuk semua kartu agar sejajar */
+  text-align: center;
+  border-radius: 10px; /* Menambahkan sudut melengkung */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin: 0.5rem; /* Margin untuk jarak antar kartu */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #ff9800; /* Menambahkan border oranye agar sejajar */
+}
+
+.education-card:hover {
+  outline: 1px solid blue;
+  background-color: rgba(255, 255, 255, 0.2); /* Sedikit lebih cerah saat hover */
+  color: white;
+}
+
+.education-card h3 a {
+  color: #ff9800; /* Atur warna teks anchor sesuai kebutuhan */
+  text-decoration: none; /* Menghilangkan garis bawah dari tautan */
+  border: 1px solid #ff9800; /* Mengatur warna dan ketebalan border */
+  padding: 0.5rem; /* Memberikan jarak antara teks dan border */
+  border-radius: 5px; /* Menambahkan sudut melengkung pada border */
+  text-align: center; /* Mengatur teks berada di tengah */
+  display: inline-block; /* Mengatur elemen sebagai block inline untuk border */
+}
+
+.education-card h3 a:hover {
+  color: white; /* Ganti warna saat hover */
+  border: 1px solid blue; /* Mengatur warna dan ketebalan border saat hover */
+  padding: 0.5rem; /* Memberikan jarak antara teks dan border */
+  border-radius: 5px; /* Menambahkan sudut melengkung pada border */
+  text-align: center; /* Mengatur teks berada di tengah */
+  display: inline-block; /* Mengatur elemen sebagai block inline untuk border */
+}
+
+.education-card h3 {
+  margin: 0 0 10px 0; /* Jarak bawah judul kartu */
+  color: #ff9800; /* Mengubah warna teks menjadi oranye cerah */
+}
+
+.education-card h3 i {
+  margin-right: 0.5rem;
+}
+
+.education-card p {
+  color: #ddd; /* Warna lebih terang untuk deskripsi */
+}
+
+/* Hover effect for icons */
+.experience-card i:hover {
+  color: #ff9800; /* Warna oranye untuk ikon saat hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-card {
+    width: auto; /* Ubah width untuk tampilan responsif */
+    margin-bottom: 0.5rem;
+  }
+
+  .education-container {
+    padding-bottom: 0; /* Hilangkan padding bawah pada ukuran kecil */
+  }
+}

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: black; /* Mengatur warna latar belakang hitam untuk menghilangkan area putih */
+}
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus elemen agar tidak keluar dari layar */
+    gap: 2rem;
+    justify-content: center; /* Memastikan elemen berada di tengah */
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #000000, #0D1B2A, #1B2631, #3F4B5B); /* Gradasi dari hitam ke biru tua */
+    background-size: cover;
+    animation: gradientAnimation 5s ease infinite; /* Animasi gradasi */
+    color: white;
+    min-height: 100vh; /* Memastikan elemen mengisi tinggi layar penuh */
+    padding-bottom: 0; /* Menghapus padding bawah ekstra */
+}
+
+.experience-card {
+    background-color: rgba(0, 0, 0, 0.1); /* Transparansi gelap untuk efek kontras */
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Efek bayangan */
+    width: 300px; /* Lebar tetap kartu */
+    height: auto;
+    min-height: 150px; /* Ketinggian minimum kartu */
+    text-align: center;
+    border-radius: 10px; /* Sudut melengkung */
+    border: 1px solid blue;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 0.5rem; /* Jarak antar kartu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.experience-card:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Sedikit lebih cerah saat hover */
+    color: white;
+}
+
+
+.experience-card h3 a {
+    color: #ff9800; /* Warna teks anchor */
+    text-decoration: none; /* Menghilangkan garis bawah dari tautan */
+    border: 1px solid #ff9800; /* Border warna oranye */
+    padding: 0.5rem; /* Jarak antara teks dan border */
+    border-radius: 5px; /* Sudut melengkung pada border */
+    text-align: center; /* Teks berada di tengah */
+    display: inline-block; /* Block inline untuk border */
+    transition: color 0.3s ease, border 0.3s ease; /* Transisi untuk hover */
+}
+
+.experience-card h3 a:hover {
+    color: white; /* Warna saat hover */
+    border: 1px solid blue; /* Warna border saat hover */
+    padding: 0.5rem;
+}
+
+.experience-card h3 {
+    margin-bottom: 1rem;
+    color: #ff9800; /* Mengubah warna teks menjadi oranye */
+}
+
+.experience-card h3 i {
+    margin-right: 0.5rem;
+}
+
+.experience-card p {
+    color: #ddd; /* Warna lebih terang untuk deskripsi */
+}
+
+/* Hover effect untuk ikon */
+.experience-card i:hover {
+    color: #ff9800; /* Warna oranye untuk ikon saat hover */
+}
+
+/* Animasi gradasi latar belakang */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Desain Responsif */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-card {
+        width: 90%; /* Lebar lebih kecil untuk layar kecil */
+        margin-bottom: 1rem;
+    }
+}

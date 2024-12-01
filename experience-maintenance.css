@@ -1,0 +1,63 @@
+/* experience-maintenance.css */
+
+/* Reset untuk menghilangkan margin dan padding default */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mengatur background dan font untuk body */
+body {
+  background: linear-gradient(135deg, #000000, #0D1B2A, #1B2631, #3F4B5B);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+/* Mengatur gaya untuk paragraf umum */
+.paraghraf {
+  max-width: 800px; /* Membatasi lebar paragraf */
+  margin: 2rem auto; /* Mengatur margin atas dan bawah */
+  padding: 1rem; /* Menambahkan padding di dalam paragraf */
+  background-color: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Bayangan */
+}
+
+/* Mengatur gaya untuk heading h3 */
+h3 {
+  margin: 1.5rem 0 0.5rem; /* Margin atas dan bawah untuk heading */
+  font-size: 1.8rem; /* Ukuran font */
+  color: #ff9800; /* Warna heading */
+  border-bottom: 2px solid #ff9800; /* Garis bawah */
+  padding-bottom: 0.5rem; /* Padding bawah */
+}
+
+/* Mengatur gaya untuk paragraf di dalam h3 */
+h3 + p {
+  margin: 0.5rem 0 1rem; /* Margin untuk paragraf setelah heading */
+  font-size: 1.2rem; /* Ukuran font untuk paragraf */
+  color: #dddddd; /* Warna teks */
+}
+
+/* Mengatur tampilan untuk semua paragraf */
+p {
+  line-height: 1.6; /* Jarak antar baris */
+  font-size: 1rem; /* Ukuran font */
+  color: #ffffff; /* Warna teks */
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+  .paraghraf {
+    margin: 1rem; /* Mengurangi margin untuk tampilan kecil */
+    padding: 0.5rem; /* Mengurangi padding untuk tampilan kecil */
+  }
+
+  h3 {
+    font-size: 1.5rem; /* Mengurangi ukuran font untuk heading */
+  }
+
+  p {
+    font-size: 0.9rem; /* Mengurangi ukuran font untuk paragraf */
+  }
+}
